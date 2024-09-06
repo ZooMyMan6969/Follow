@@ -93,7 +93,7 @@ local function print_ally_id_near_cursor()
 end
 -- Register the keybind
 on_key_press(function(key)
-    if key == 0x52 then  -- Check if spacebar is pressed (0x20 is the key code for spacebar)
+    if key == 
         print_ally_id_near_cursor()
     end
 end)
