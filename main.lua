@@ -20,7 +20,7 @@ local function follow_ally()
 
     -- Ally ID
     local specific_ally = nil
-    local specific_ally_id = 524767               -- edit this
+    local specific_ally_id =
 
     for _, ally in ipairs(allies) do
         local ally_id = ally:get_id()
