@@ -1,3 +1,4 @@
+-- Load the custom menu
 local menu = require("menu")
 local function follow_ally()
 
@@ -75,7 +76,7 @@ local function print_ally_id_near_cursor()
 
         if ally:get_id() ~= local_player:get_id() then
             local distance_to_cursor = cursor_position:dist_to(ally_position)
-            if distance_to_cursor <= 2 then
+            if distance_to_cursor <= 1 then
                 console.print("Ally ID within 2 units of cursor: ", ally:get_id())
             end
         else
@@ -85,7 +86,7 @@ local function print_ally_id_near_cursor()
 end
 
 on_key_press(function(key)
-    if key == 0x52 then  -- Check if spacebar is pressed (0x20 is the key code for spacebar)
+    if key == menu.elements.keybind:get() then  -- Customizable keybind
         print_ally_id_near_cursor()
     end
 end)
